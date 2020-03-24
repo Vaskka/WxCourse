@@ -1,0 +1,50 @@
+/* pages/history/history.wxss */
+
+/**
+  * color style rgb:
+  * 53, 53, 53     main bg
+  * 166, 130, 97   normal bg
+  * 193, 117, 85   level_1 bg
+  * 145, 43, 65    level_2 bg
+  * 233, 233, 233  normal text
+  */
+
+.container {
+    padding: 0;
+    height: 100vh;
+}
+
+.page-section {
+    height: 10vh;
+}
+
+/* top title */
+.page-section-title {
+    text-align: center;
+    line-height: 10vh;
+    background-color: #353535;
+    color: #e9e9e9;
+    border-bottom: #e9e9e9 solid 1px;
+    box-shadow: 1px 1px 2px #DDDDDD;
+}
+
+/* scroll area */
+.page-section-spacing{
+    background-color: #353535;
+}
+
+.scroll-view-container {
+    width: 750rpx;
+    height: 90vh;
+}
+
+.scroll-view-item{
+    height: 10vh;
+    border: 1px solid rgb(193, 117, 85);
+    background-color: rgb(193, 117, 85);
+    color: #e9e9e9;
+    line-height: 10vh;
+    margin:30rpx 20rpx;
+    text-align: center;
+    border-radius: 5px;
+}

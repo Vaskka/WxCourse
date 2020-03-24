@@ -1,0 +1,107 @@
+<!--index.wxml-->
+<view class="cal-container">
+
+  <!-- <view class="top-text-container border-container">
+    <text class="top-text-content"> 计算器小程序 </text>
+  </view> -->
+
+  <!-- 展示框 -->
+  <view class="show-view-container border-container">
+    <view class="show-view-content"> {{ exprText == null ? "0" : exprText }} </view>
+  </view>
+
+  <!-- 保存历史记录 -->
+  <view class="save-history-container border-container">
+    <switch class="save-history-control" checked="{{isSaveHistory}}" bindchange="changeSaveHistory" />
+    <text class="save-history-text"> 保存历史记录 </text>
+  </view>
+
+  <!-- 中间操作键盘 -->
+  <view class="ops-container border-container">
+    
+    <!-- 1st row -->
+    <view class="row-show-his-ac-back-div row">
+      <view class="col-show-his col col-func" bindtap="tapButton" data-id="SH"> 
+        <text class="border-content"> SH </text>
+      </view>
+      <view class="col-ac col col-func" bindtap="tapButton" data-id="AC"> 
+        <text class="border-content"> AC </text>
+      </view>
+      <view class="col-back col col-func" bindtap="tapButton" data-id="Back"> 
+        <text class="border-content"> Back </text>
+      </view>
+      <view class="col-div col col-op" bindtap="tapButton" data-id="Div"> 
+        <text class="border-content"> / </text>
+      </view>
+    </view>
+
+    <!-- 2nd row -->
+    <view class="row-7-8-9-x row">
+      <view class="col-7 col" bindtap="tapButton" data-id="7">
+        <text class="border-content"> 7 </text>
+      </view>
+      <view class="col-8 col" bindtap="tapButton" data-id="8">
+        <text class="border-content"> 8 </text>
+      </view>
+      <view class="col-9 col" bindtap="tapButton" data-id="9">
+        <text class="border-content"> 9 </text>
+      </view>
+      <view class="col-x col col-op" bindtap="tapButton" data-id="x">
+        <text class="border-content"> x </text>
+      </view>
+    </view>
+
+    <!-- 3rd row -->
+    <view class="row-4-5-6-- row">
+      <view class="col-4 col" bindtap="tapButton" data-id="4">
+        <text class="border-content"> 4 </text>
+      </view>
+      <view class="col-5 col" bindtap="tapButton" data-id="5">
+        <text class="border-content"> 5 </text>
+      </view>
+      <view class="col-6 col" bindtap="tapButton" data-id="6">
+        <text class="border-content"> 6 </text>
+      </view>
+      <view class="col-- col col-op" bindtap="tapButton" data-id="-">
+        <text class="border-content"> - </text>
+      </view>
+    </view>
+
+    <!-- 4th row -->
+    <view class="row-1-2-3-+ row">
+      <view class="col-1 col" bindtap="tapButton" data-id="1">
+        <text class="border-content"> 1 </text>
+      </view>
+      <view class="col-2 col"bindtap="tapButton" data-id="2">
+        <text class="border-content"> 2 </text>
+      </view>
+      <view class="col-3 col" bindtap="tapButton" data-id="3">
+        <text class="border-content"> 3 </text>
+      </view>
+      <view class="col-+ col col-op" bindtap="tapButton" data-id="+">
+        <text class="border-content"> + </text>
+      </view>
+    </view>
+
+    <!-- 5th row -->
+    <view class="row-swi-0-point-ent row">
+      <view class="col-swi col col-op" bindtap="tapButton" data-id="+/-">
+        <text class="border-content"> +/- </text>
+      </view>
+
+      <view class="col-0 col" bindtap="tapButton" data-id="0">
+        <text class="border-content"> 0 </text>
+      </view>
+
+      <view class="col-point col col-op" bindtap="tapButton" data-id=".">
+        <text class="border-content"> . </text>
+      </view>
+
+      <view class="col-eny col col-op" bindtap="tapButton" data-id="Enter">
+        <text class="border-content"> = </text>
+      </view>
+    
+    </view>
+  </view>
+
+</view>

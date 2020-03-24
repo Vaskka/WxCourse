@@ -1,0 +1,133 @@
+/**index.wxss**/
+
+/**
+  * color style rgb:
+  * 53, 53, 53     main bg
+  * 166, 130, 97   normal bg
+  * 193, 117, 85   level_1 bg
+  * 145, 43, 65    level_2 bg
+  * 233, 233, 233  normal text
+  */
+
+.cal-container {
+  width: 100%;
+  height: 100vh;
+
+  background-color: #353535;
+  color: #E9E9E9;
+
+}
+
+/* main border container */
+.border-container {
+  display: flex;
+}
+
+/* top contain */
+.top-text-container {
+  height: 7vh;
+  justify-content: center;
+  line-height: 7vh;
+}
+
+/* show container outer container */
+.show-view-container {
+  height: 10vh;
+  width: 100%;
+}
+
+/* show container inner border */
+.show-view-container > .show-view-content {
+
+  height: 8vh;
+  width: 735rpx;
+
+  line-height: 8vh;
+  font-size: 6vh;
+
+  position: relative;
+  top: 1vh;
+  left: 7.5rpx;
+
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* save history ot not */
+.save-history-container {
+  height: 10vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.save-history-container > .save-history-text {
+  line-height: 10vh;
+}
+
+
+/* override wx-switch */
+.wx-switch-input {
+  width: 120rpx !important;
+  height: 70rpx !important;
+  background: rgb(193, 117, 85) !important;
+  border: rgb(193, 117, 85) !important;
+  box-sizing: border-box;
+}
+
+.wx-switch-input::before {
+width: 120rpx !important;
+height: 70rpx !important;
+}
+
+.wx-switch-input::after {
+width: 75rpx !important;
+height: 70rpx !important;
+}
+
+/* .save-history-container > .save-history-control {
+
+} */
+
+/* ops border container */
+.ops-container {
+  /* height: 100%; */
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.row {
+
+  height: 187.5rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: #353535;
+}
+
+.col {
+  height: 150rpx;
+  width: 150rpx;
+  background-color: rgb(166, 130, 97);
+  border: 0;
+  border-radius: 75px;
+
+  /* box-shadow: 1px 1px 2px #999999; */
+}
+
+.col-op {
+  background-color: rgb(193, 117, 85);
+}
+
+.col-func {
+  background-color: rgb(145, 43, 65);
+}
+
+.border-content {
+  display: block;
+  text-align: center;
+
+  line-height: 150rpx;
+  font-size: 50rpx;
+}

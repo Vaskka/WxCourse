@@ -1,0 +1,28 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>历史记录</text>
+      </view>
+      <view class="page-section-spacing">
+
+        <!-- show history content -->
+        <scroll-view 
+         scroll-y="true"
+         class="scroll-view-container"
+         bindscrolltoupper="upper"
+         bindscrolltolower="lower" 
+         bindscroll="scroll" 
+         scroll-into-view="{{toView}}" 
+         scroll-top="{{scrollTop}}">
+          <view wx:for='{{contentList}}' 
+         wx:for-item="item" class="scroll-view-item"> {{ item }} </view>
+        </scroll-view>
+        
+      </view>
+
+    </view>
+
+  </view>
+</view>
