@@ -1,11 +1,7 @@
 {
   "pages": [
-    "pages/banner/banner",
-    "pages/slide/slide",
-    "pages/form/form",
     "pages/index/index",
-    "pages/history/history"
-
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

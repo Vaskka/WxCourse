@@ -1,0 +1,39 @@
+<!--pages/form/form.wxml-->
+<view class="form-container">
+
+    <!-- 标题container -->
+    <view class="title-container">
+        <text class="title-content"> 表单练习-2 </text>
+        <text class="title-content"> 2020/03/26</text>
+    </view>
+    
+    <!-- 主体container -->
+    <view class="form-content-container">
+        <form class="main-form" bindsubmit="formSubmit" bindreset="formReset">
+            <view class="sel-area">
+                <text class="sel-head"> Gender </text>
+                <radio-group class="gender-group group" bindchange="radioChange">
+                    <radio class="radio group-item" wx:for-items="{{ genderList }}" wx:key="genderCode" value="{{item.genderCode}}" checked="{{item.checked}}">
+                        <text> {{ item.genderValue }} </text>
+                    </radio>
+                </radio-group>
+    
+                <text class="sel-head"> Country: </text>
+                <checkbox-group class="country-group group" bindchange="checkboxChange">
+                    <label class="checkbox group-item" wx:for="{{countryList}}">
+                      <checkbox value="{{item.countryCode}}" checked="{{item.checked}}"/> {{item.countryName}}
+                    </label>
+                </checkbox-group>
+            </view>
+            
+            <view class="func-area">
+                <button class="submit-btn btn" formType="submit">
+                    提交
+                </button>
+                <button class="reset-btn btn" formType="reset"> 
+                    重置
+                </button>
+            </view>
+        </form>
+    </view>
+</view>

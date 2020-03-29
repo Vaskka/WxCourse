@@ -1,0 +1,82 @@
+<!--pages/banner/banner.wxml-->
+<view class="form-container">
+
+    <!-- 标题container -->
+    <view class="title-container">
+        <text class="title-content"> 表单练习-banner and picker </text>
+        <text class="title-content"> 2020/03/26</text>
+    </view>
+
+    <view class="page-body">
+        <view class="page-section page-section-spacing swiper">
+          <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{background}}" wx:key="*this">
+              <swiper-item>
+                <view class="swiper-item {{item}}"></view>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+        <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_switch">
+              <view class="weui-cell__bd">指示点</view>
+              <view class="weui-cell__ft">
+                <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+              </view>
+            </view>
+            <view class="weui-cell weui-cell_switch">
+              <view class="weui-cell__bd">自动播放</view>
+              <view class="weui-cell__ft">
+                <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+              </view>
+            </view>
+          </view>
+        </view>
+    
+        <view class="page-section page-section-spacing">
+          <view class="page-section-title">
+            <text>幻灯片切换时长(ms)</text>
+            <text class="info">{{duration}}</text>
+          </view>
+          <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000"/>
+          <view class="page-section-title">
+            <text>自动播放间隔时长(ms)</text>
+            <text class="info">{{interval}}</text>
+          </view>
+          <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000"/>
+        </view>
+      </view>
+    
+    <!-- 主体container -->
+    <view class="form-content-container">
+        <form class="main-form" bindsubmit="formSubmit" bindreset="formReset">
+            <view class="sel-area">
+                <text class="sel-head"> picker </text>
+                <view class="section picker">
+                    <picker class="" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                      <view>
+                        当前选择: {{ date }}
+                      </view>
+                    </picker>
+                </view>
+
+                
+            </view>
+            
+            <view class="func-area">
+                <button class="submit-btn btn" formType="submit">
+                    提交
+                </button>
+                <button class="reset-btn btn" formType="reset"> 
+                    重置
+                </button>
+            </view>
+        </form>
+
+        <button class="next-btn btn" bindtap="nextForm" formType="reset"> 
+            下一表单
+        </button>
+    </view>
+</view>
