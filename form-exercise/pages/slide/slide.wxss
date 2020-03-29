@@ -1,0 +1,85 @@
+/* pages/slide/slide.wxss */
+
+.form-container {
+    width: 100%;
+    height: 100vh;
+
+    /* background-color: #353535;
+    color: #E9E9E9; */
+
+}
+
+.title-container {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.title-content {
+    display: block;
+    text-align: center;
+}
+
+.form-conntent-container {
+    width: 100%;
+    height: 80vh;
+}
+
+.sel-head {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+.group-item {
+    margin: 20rpx 20rpx;
+}
+.btn {
+    width: 80%;
+    margin-top: 20rpx;
+}
+
+.submit-btn {
+    background-color: #66CCFF;
+    color: azure;
+}
+
+.reset-btn {
+    background-color: #CC3300;
+    color: azure;
+}
+
+.input-title {
+    display: inline-block;
+    text-align: center;
+
+}
+
+.input {
+
+    display: inline-block;
+    border: 1px solid #000;
+    width: 70%;
+
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    padding: 30rpx;
+}

@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/form/form",
+    "pages/slide/slide",
+    "pages/index/index"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
