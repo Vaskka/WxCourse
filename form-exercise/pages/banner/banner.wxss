@@ -1,4 +1,4 @@
-/* pages/slide/slide.wxss */
+/* pages/banner/banner.wxss */
 
 .form-container {
     width: 100%;
@@ -40,12 +40,17 @@
     width: 100%;
     display: flex;
     justify-content: start;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .group-item {
     margin: 20rpx 20rpx;
 }
+
+.picker {
+    margin: 20rpx 75rpx;
+}
+
 .btn {
     width: 80%;
     margin-top: 20rpx;
@@ -59,31 +64,4 @@
 .reset-btn {
     background-color: #CC3300;
     color: azure;
-}
-
-.next-btn {
-    background-color: #EEEEEE;
-}
-
-.input-title {
-    display: inline-block;
-    text-align: center;
-
-}
-
-.input {
-
-    display: inline-block;
-    border: 1px solid #000;
-    width: 70%;
-
-}
-
-.input-group {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-
-    padding: 30rpx;
 }

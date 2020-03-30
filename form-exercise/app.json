@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/form/form",
     "pages/slide/slide",
+    "pages/form/form",
+    "pages/banner/banner",
     "pages/index/index"
-
   ],
   "window": {
     "backgroundTextStyle": "light",

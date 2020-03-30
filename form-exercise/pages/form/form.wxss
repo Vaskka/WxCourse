@@ -87,6 +87,9 @@
     color: azure;
 }
 
+.next-btn {
+    background-color: #EEEEEE;
+}
 
 
 /*

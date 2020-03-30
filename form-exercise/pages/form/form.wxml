@@ -53,5 +53,9 @@
               </button>
           </view>
       </form>
+
+      <button class="next-btn btn" bindtap="nextForm"> 
+        下一Banner
+      </button>
   </view>
 </view>

@@ -37,7 +37,7 @@
             </view>
         </form>
 
-        <button class="next-btn btn" bindtap="nextForm" formType="reset"> 
+        <button class="next-btn btn" bindtap="nextForm"> 
             下一表单
         </button>
     </view>
