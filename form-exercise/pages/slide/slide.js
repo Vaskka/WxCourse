@@ -8,6 +8,26 @@ Page({
     // is music data
     music: true,
 
+    loading: true,
+    countDown: 1,
+
+    showActionsheet: false,
+    groups: [
+        { text: '示例菜单', value: 1 },
+        { text: '示例菜单', value: 2 },
+        { text: '负向菜单', type: 'warn', value: 3 }
+    ]
+
+  },
+
+  close: function () {
+    this.setData({
+        showActionsheet: false
+    })
+  },
+  btnClick(e) {
+      console.log(e)
+      this.close()
   },
 
   formSubmit(e) {
@@ -17,6 +37,11 @@ Page({
       volume: this.data.volume ? this.data.volume : 0,
       others: this.data.others ? this.data.others : "",
     });
+
+
+    this.load(function() {
+      console.log("完成loading")
+    })
   },
 
   formReset() {
@@ -31,6 +56,7 @@ Page({
   switchChange(e) {
     
     this.setData({
+      showActionsheet: !this.data.showActionsheet,
       music: e.detail.value
     });
   },
@@ -42,15 +68,52 @@ Page({
   },
 
   nextForm(e) {
-    wx.navigateTo({
-      url: '../../pages/form/form',
+
+    // navigate after modal
+    wx.showModal({
+      title: '提示',
+      content: '您确定要进入下一表单吗?',
+      success (res) {
+        if (res.confirm) {
+          wx.navigateTo({
+            url: '../../pages/form/form',
+          })
+      
+        } else if (res.cancel) {
+          console.log('go back this form.')
+        }
+      }
     })
+
   },
 
   bindKeyInput (e) {
     this.setData({
       others: e.detail.value
     })
+  },
+
+  load(after) {
+    wx.showLoading({
+      title: '请稍后..Please wait..',
+    })
+
+    let  that = this;
+
+    let interval = setInterval(function () {
+      
+      if (that.data.countDown < 0) {
+        clearInterval(interval);
+        wx.hideLoading()
+        after()
+        return;
+      }
+
+      that.setData({
+        countDown: that.data.countDown - 1
+      });
+
+    }, 1000);
   },
 
   /**

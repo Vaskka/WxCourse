@@ -1,0 +1,15 @@
+{
+  "name": "form-exercise",
+  "version": "1.0.0",
+  "description": "form exercise",
+  "main": "app.js",
+  "dependencies": {
+    "weui-miniprogram": "^0.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

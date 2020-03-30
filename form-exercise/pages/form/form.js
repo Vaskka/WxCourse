@@ -61,6 +61,13 @@ Page({
       time: this.data.time,
       others: this.data.others,
     });
+
+    wx.showToast({
+      title: '已提交',
+      icon: 'success',
+      duration: 1200
+    })
+
   },
 
   formReset() {
@@ -69,6 +76,13 @@ Page({
       gender: "",
       country: [],
     })
+
+    wx.showToast({
+      title: '已清空',
+      icon: 'success',
+      duration: 1200
+    })
+
   },
 
   radioChange(e) {
@@ -111,8 +125,20 @@ Page({
   },
 
   nextForm(e) {
-    wx.navigateTo({
-      url: '../../pages/banner/banner',
+
+    wx.showModal({
+      title: '提示',
+      content: '您确定要进入下一表单吗?',
+      success (res) {
+        if (res.confirm) {
+          wx.navigateTo({
+            url: '../../pages/banner/banner',
+          })
+      
+        } else if (res.cancel) {
+          console.log('go back this form.')
+        }
+      }
     })
   },
 
