@@ -1,0 +1,61 @@
+<!--pages/form/form.wxml-->
+<view class="form-container">
+  
+  <!-- 主体container -->
+  <view class="form-content-container">
+      <form class="main-form" bindsubmit="formSubmit" bindreset="formReset">
+          <view class="sel-area">
+              <text class="sel-head"> Gender </text>
+              <radio-group class="gender-group group" bindchange="radioChange">
+                  <radio class="radio group-item" wx:for-items="{{ genderList }}" wx:key="genderCode" value="{{item.genderCode}}" checked="{{item.checked}}">
+                      <text> {{ item.genderValue }} </text>
+                  </radio>
+              </radio-group>
+  
+              <text class="sel-head"> Country: </text>
+              <checkbox-group class="country-group group" bindchange="checkboxChange">
+                  <label class="checkbox group-item" wx:for="{{countryList}}">
+                    <checkbox value="{{item.countryCode}}" checked="{{item.checked}}"/> {{item.countryName}}
+                  </label>
+              </checkbox-group>
+
+              <text class="sel-head"> Date: </text>
+              <view class="group">
+                <picker mode="date" value="{{date}}" start="{{date}}" end="2021-06-25" bindchange="bindDateChange">
+                  <view class="group-item">
+                    选择出发日期: {{ date }}
+                  </view>
+                </picker>
+              </view>
+
+              <text class="sel-head"> Time: </text>
+              <view class="group">
+                <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+                  <view class="group-item">
+                    选择出发时间: {{ time }}
+                  </view>
+                </picker>
+              </view>
+              <text class="sel-head"> Others: </text>
+              <view class="group row-group">
+
+                  <text> 其他: </text>
+                  <input bindinput="bindOthersInput" class="input group-item" />
+              </view>
+          </view>
+          
+          <view class="func-area">
+              <button class="submit-btn btn" formType="submit">
+                  提交
+              </button>
+              <button class="reset-btn btn" formType="reset"> 
+                  重置
+              </button>
+          </view>
+      </form>
+
+      <button class="next-btn btn" bindtap="nextForm"> 
+        下一Banner
+      </button>
+  </view>
+</view>

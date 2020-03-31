@@ -1,0 +1,133 @@
+/* pages/form/form.wxss */
+
+.form-container {
+    width: 100%;
+    height: 100vh;
+
+    /* background-color: #353535;
+    color: #E9E9E9; */
+
+}
+
+.title-container {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.title-content {
+    display: block;
+    text-align: center;
+}
+
+.form-conntent-container {
+    width: 100%;
+    height: 80vh;
+}
+
+.sel-head {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.country-group {
+    height: 15vh;
+    flex-wrap: wrap;
+}
+
+.row-group {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.group-item {
+    margin: 10rpx 20rpx;
+    height: 60rpx;
+}
+
+.fake-box {
+
+    width: 30%;
+
+    border: 1px solid #aaa;
+}
+
+.input {
+    width: 60%;
+    border: 1px solid #000;
+}
+
+.btn {
+    width: 80%;
+    margin-top: 20rpx;
+}
+
+.submit-btn {
+    background-color: #66CCFF;
+    color: azure;
+}
+
+.reset-btn {
+    background-color: #CC3300;
+    color: azure;
+}
+
+.next-btn {
+    background-color: #EEEEEE;
+}
+
+
+/*
+checkbox .wx-checkbox-input{
+
+    border-radius:50%;
+
+    width:20px;height:20px;
+
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+
+    border-color:#F0302F !important;
+
+    background:#F0302F !important;
+
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+
+    border-radius:50%;
+
+    width:20px;
+
+    height:20px;
+
+    line-height:20px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    color:#000;
+
+    background:transparent;
+
+    transform:translate(-50%, -50%) scale(1);
+
+    -webkit-transform:translate(-50%, -50%) scale(1);
+
+}
+*/

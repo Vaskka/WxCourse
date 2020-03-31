@@ -1,0 +1,46 @@
+<!--pages/slide/slide.wxml-->
+<view class="form-container">
+
+    <!-- 标题container -->
+    <view class="title-container">
+        <text class="title-content"> 表单练习-1 </text>
+        <text class="title-content"> 2020/03/26</text>
+    </view>
+    
+    <!-- 主体container -->
+    <view class="form-content-container">
+        <form class="main-form" bindsubmit="formSubmit" bindreset="formReset">
+            <view class="sel-area">
+                <text class="sel-head"> Gender </text>
+                <radio-group class="gender-group group" bindchange="radioChange">
+                    <radio class="radio group-item" wx:for-items="{{ genderList }}" wx:key="genderCode" value="{{item.genderCode}}" checked="{{item.checked}}">
+                        <text> {{ item.genderValue }} </text>
+                    </radio>
+                </radio-group>
+    
+                <text class="sel-head"> Volume </text>
+                <slider bindchange="slider4change" min="0" max="100" show-value/>
+
+                <text class="sel-head"> Others </text>
+                <view class="input-group">
+                    <text> other: </text>
+                    <input bindinput="bindKeyInput" class="input" />
+                </view>
+
+            </view>
+            
+            <view class="func-area">
+                <button class="submit-btn btn" formType="submit">
+                    提交
+                </button>
+                <button class="reset-btn btn" formType="reset"> 
+                    重置
+                </button>
+            </view>
+        </form>
+
+        <button class="next-btn btn" bindtap="nextForm" formType="reset"> 
+            下一表单
+        </button>
+    </view>
+</view>
