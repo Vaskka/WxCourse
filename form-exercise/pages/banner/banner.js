@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // gender data
+    // image data
     image: ['https://edu-1255976561.cos.ap-chengdu.myqcloud.com/cloth/60742db1eea17acd726d6607bc7b14a3-img_0353.png',
     'https://edu-1255976561.cos.ap-chengdu.myqcloud.com/cloth/662e5308fa3648c093fb094d3c0667cb-Screenshot_2020-02-16-11-18-57-87.png',
     'https://edu-1255976561.cos.ap-chengdu.myqcloud.com/cloth/f8edbf2699de849536778a15f9642124-img_0354.png'],
