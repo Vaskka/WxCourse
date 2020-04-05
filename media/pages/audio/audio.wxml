@@ -1,0 +1,22 @@
+<!-- audio.wxml -->
+
+<!-- 旧版音频组件，功能较少 -->
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+
+<!-- 新版音频api实现 -->
+<slider bindchange="durationChange" value="{{seekValue}}" left-icon="cancel" right-icon="success_no_circle" min="{{seekMin}}" max="{{seekMax}}" show-value="{{false}}"/>
+
+<view class="playContainer">  
+    <view class="playBtn" bindtap="audioPlay">  
+    <text href="#" title="start">Start</text>  
+    </view>  
+    <view class="pauseBtn" bindtap="audioPause">  
+    <text href="#" title="pause">Pause</text>  
+    </view> 
+    <view class="stopBtn" bindtap="audioStart">  
+    <text href="#" title="stop">Stop</text>  
+    </view> 
+</view>  
+
+<button bindtap="next" class="next"> 视频展示 </button>

@@ -1,0 +1,60 @@
+.playContainer { 
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    position: relative; 
+    float: left; 
+    background: #EEEEEE; 
+    padding: 20px;
+ }  
+
+
+.playContainer view { 
+
+    position: relative; 
+    float: left; 
+    border: 25px solid #AAAAAA; 
+    color: #AAAAAA; 
+    height: 0; 
+    width:0;
+    border-radius: 100%; 
+    margin: 0 20px; 
+}  
+
+.playContainer text { 
+    border-style: solid; 
+    text-indent: -9999px; 
+    position: absolute; 
+    top: -8px; 
+    left: -3px;  
+}  
+  
+.playBtn text { 
+    border-color: transparent transparent transparent #fff; 
+    border-width: 8px 0 8px 12px;  
+    width: 0; 
+    height: 0; 
+}  
+.pauseBtn text { 
+    border-color: transparent white;  
+    border-width: 0 6px; 
+    height: 15px; 
+    width: 6px; 
+    left: -9px; 
+}  
+
+.stopBtn text { 
+    border: 7px solid #fff; 
+    height: 0; 
+    width: 0; 
+    left: -7px; 
+    top: -7px;
+} 
+
+.next {
+    position: relative;
+    top: 120rpx;
+}
